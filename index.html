@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Hành Trình Vệ Thần Tri Thức</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div id="app-viewport">
+    <div id="game-stage" class="stage-16-9">
+      <!-- Canvas 2D hiển thị thế giới 3D Pixar & nhân vật Skeletal Rigging -->
+      <canvas id="game-canvas" width="1280" height="720"></canvas>
+
+      <!-- HUD khi đang chơi -->
+      <header id="hud-bar" class="hud-bar hidden" aria-label="Thông tin trận đấu">
+        <div class="hud-group" id="hud-solo-stats">
+          <div class="hud-pill hud-lives" id="hud-lives" title="Mạng sống">
+            <img src="./assets/images/heart_gem.png" alt="Tim" class="hud-icon" />
+            <span id="lives-count">3</span>
+          </div>
+          <div class="hud-pill hud-shield hidden" id="hud-shield" title="Khiên ánh sáng">
+            <img src="./assets/images/shield_orb.png" alt="Khiên" class="hud-icon" />
+            <span>Khiên</span>
+          </div>
+          <div class="hud-pill hud-score">
+            <img src="./assets/images/star_knowledge.png" alt="Điểm" class="hud-icon" />
+            <span id="score-value">0</span>
+          </div>
+          <div class="hud-pill hud-combo" id="hud-combo">
+            <span>Combo x<strong id="combo-value">0</strong></span>
+          </div>
+        </div>
+
+        <div class="multiplayer-bar hidden" id="multiplayer-bar" aria-label="Bảng điểm nhiều người chơi"></div>
+
+        <div class="hud-center">
+          <div class="level-badge" id="level-badge">Cấp 1: Rừng Sáng Sớm</div>
+          <div class="progress-wrap" title="Tiến độ câu hỏi">
+            <div class="progress-fill" id="progress-fill"></div>
+            <span class="progress-text" id="progress-text">0 / 10</span>
+          </div>
+        </div>
+
+        <div class="hud-group">
+          <div class="hud-pill hud-timer" id="hud-timer">
+            <span id="timer-value">20</span>s
+          </div>
+          <button id="btn-jump-action" class="btn-hud btn-action" type="button" title="Nhảy thu thập sao (Space)">
+            Nhảy
+          </button>
+          <button id="btn-mute-hud" class="btn-hud" type="button" aria-label="Bật hoặc tắt âm thanh">
+            Âm thanh: Bật
+          </button>
+          <button id="btn-pause" class="btn-hud" type="button">Tạm dừng</button>
+        </div>
+      </header>
+
+      <!-- Bảng câu hỏi đặt gọn ở phần dưới, hoàn toàn không che nhân vật & quái vật -->
+      <section id="quiz-panel" class="quiz-panel hidden" aria-label="Câu hỏi thử thách">
+        <div class="quiz-header">
+          <div class="quiz-header-left">
+            <span class="quiz-category" id="quiz-category">Khoa học tự nhiên</span>
+            <span class="quiz-turn-tag hidden" id="quiz-turn-tag">Lượt: Người 1</span>
+          </div>
+          <span class="quiz-enemy-tag" id="quiz-enemy-tag">Đối đầu: Nấm Mù Mờ</span>
+        </div>
+        <h2 class="quiz-question" id="quiz-question-text">Đang tải câu hỏi...</h2>
+        <div class="quiz-options" id="quiz-options">
+          <button class="option-btn" data-index="0" type="button"><span class="opt-key">A</span><span class="opt-text"></span></button>
+          <button class="option-btn" data-index="1" type="button"><span class="opt-key">B</span><span class="opt-text"></span></button>
+          <button class="option-btn" data-index="2" type="button"><span class="opt-key">C</span><span class="opt-text"></span></button>
+          <button class="option-btn" data-index="3" type="button"><span class="opt-key">D</span><span class="opt-text"></span></button>
+        </div>
+        <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+      </section>
+
+      <!-- MÀN HÌNH TRANG CHỦ PIXAR 3D CUTE -->
+      <section id="screen-menu" class="overlay-screen menu-hero-screen">
+        <div class="menu-hero-top">
+          <div class="menu-stats-pill">
+            <span><img src="./assets/images/trophy_cup.png" alt="" class="pill-mini-icon" /> Điểm cao: <strong id="menu-highscore">0</strong></span>
+            <span><img src="./assets/images/star_knowledge.png" alt="" class="pill-mini-icon" /> Kho câu hỏi: <strong id="menu-qcount">30</strong> câu</span>
+            <span>Chế độ: <strong id="menu-mode-label">1 người</strong></span>
+          </div>
+        </div>
+
+        <div class="menu-hero-dock">
+          <div class="menu-actions">
+            <button id="btn-start-game" class="btn-3d btn-3d-green btn-lg" type="button">Bắt đầu phiêu lưu</button>
+            <button id="btn-open-guide" class="btn-3d btn-3d-blue" type="button">Hướng dẫn</button>
+            <button id="btn-open-settings" class="btn-3d btn-3d-purple" type="button">Thiết lập</button>
+            <button id="btn-open-teacher" class="btn-3d btn-3d-amber" type="button">Quản lý câu hỏi (Giáo viên)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MÀN HÌNH HƯỚNG DẪN -->
+      <section id="screen-guide" class="overlay-screen hidden">
+        <div class="modal-card pixar-card">
+          <h2>Hướng dẫn chơi</h2>
+          <div class="guide-grid">
+            <div class="guide-item">
+              <h3>1. Vượt chặng &amp; Né đòn</h3>
+              <p>Nhấn nút <strong>Nhảy</strong> (hoặc phím <strong>Space</strong>) để Bé Mầm nhảy thu thập Sao Tri Thức giữa các đợt quái vật.</p>
+            </div>
+            <div class="guide-item">
+              <h3>2. Chiến đấu bằng Tri Thức</h3>
+              <p>Chọn nhanh đáp án đúng <strong>A, B, C, D</strong>. Mỗi lượt chơi, thứ tự câu hỏi và 4 đáp án đều được đảo ngẫu nhiên.</p>
+            </div>
+            <div class="guide-item">
+              <h3>3. Bộ câu hỏi &amp; Nhiều người</h3>
+              <p>Vào <strong>Thiết lập</strong> để chọn bộ câu hỏi theo môn học và chọn chế độ <strong>1–4 người/đội</strong> thi đấu trên cùng màn hình.</p>
+            </div>
+            <div class="guide-item">
+              <h3>4. Dành cho Giáo viên</h3>
+              <p>Mở mục <strong>Quản lý câu hỏi</strong> để thêm, sửa, xóa hoặc nhập/xuất bộ câu hỏi JSON/CSV theo bài học.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-guide-back" class="btn-3d btn-3d-green" type="button">Đã hiểu</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MÀN HÌNH THIẾT LẬP -->
+      <section id="screen-settings" class="overlay-screen hidden">
+        <div class="modal-card pixar-card">
+          <h2>Thiết lập trò chơi</h2>
+          <div class="settings-form">
+            <div class="setting-row">
+              <label for="setting-qset">Bộ câu hỏi (Chủ đề)</label>
+              <select id="setting-qset">
+                <option value="all">Tất cả câu hỏi</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="setting-qcount">Số câu hỏi khi chơi</label>
+              <select id="setting-qcount">
+                <option value="all" selected>Chạy hết toàn bộ câu trong bộ</option>
+                <option value="5">Giới hạn 5 câu</option>
+                <option value="10">Giới hạn 10 câu</option>
+                <option value="15">Giới hạn 15 câu</option>
+                <option value="20">Giới hạn 20 câu</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="setting-players">Số người chơi / Đội (tối đa 4)</label>
+              <select id="setting-players">
+                <option value="1" selected>1 Người chơi (Đấu đơn)</option>
+                <option value="2">2 Người / 2 Đội</option>
+                <option value="3">3 Người / 3 Đội</option>
+                <option value="4">4 Người / 4 Đội</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="setting-time">Thời gian mỗi câu (giây)</label>
+              <select id="setting-time">
+                <option value="15">15 giây</option>
+                <option value="20" selected>20 giây</option>
+                <option value="30">30 giây</option>
+                <option value="45">45 giây</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="setting-sound-toggle">Âm thanh tổng</label>
+              <input id="setting-sound-toggle" type="checkbox" checked />
+            </div>
+            <div class="setting-row">
+              <label for="setting-bgm-vol">Âm lượng nhạc nền</label>
+              <input id="setting-bgm-vol" type="range" min="0" max="1" step="0.05" value="0.4" />
+            </div>
+            <div class="setting-row">
+              <label for="setting-sfx-vol">Âm lượng hiệu ứng</label>
+              <input id="setting-sfx-vol" type="range" min="0" max="1" step="0.05" value="0.8" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-settings-save" class="btn-3d btn-3d-green" type="button">Lưu thiết lập</button>
+            <button id="btn-settings-cancel" class="btn-3d btn-3d-slate" type="button">Đóng</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MÀN HÌNH TẠM DỪNG -->
+      <section id="screen-pause" class="overlay-screen hidden">
+        <div class="modal-card modal-sm pixar-card">
+          <h2>Trò chơi đang tạm dừng</h2>
+          <p>Bạn có thể tiếp tục hoặc quay về trang chủ bất cứ lúc nào.</p>
+          <div class="menu-actions" style="margin-top:14px;">
+            <button id="btn-resume-game" class="btn-3d btn-3d-green" type="button">Tiếp tục chơi</button>
+            <button id="btn-restart-from-pause" class="btn-3d btn-3d-blue" type="button">Chơi lại từ đầu</button>
+            <button id="btn-quit-to-menu" class="btn-3d btn-3d-red" type="button">Về trang chủ</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MÀN HÌNH TỔNG KẾT -->
+      <section id="screen-result" class="overlay-screen hidden">
+        <div class="modal-card pixar-card">
+          <div class="result-badge" id="result-badge">Chiến thắng!</div>
+          <h2 id="result-title">Khu rừng đã sáng bừng tri thức!</h2>
+          <div class="result-stats" id="solo-result-stats">
+            <div class="stat-box">
+              <span class="stat-label">Tổng điểm</span>
+              <strong class="stat-val" id="res-score">0</strong>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">Trả lời đúng</span>
+              <strong class="stat-val" id="res-correct">0 / 0</strong>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">Combo cao nhất</span>
+              <strong class="stat-val" id="res-combo">0</strong>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">Mạng còn lại</span>
+              <strong class="stat-val" id="res-lives">0</strong>
+            </div>
+          </div>
+          <div class="leaderboard-wrap hidden" id="multiplayer-leaderboard"></div>
+          <div class="modal-footer">
+            <button id="btn-play-again" class="btn-3d btn-3d-green" type="button">Chơi lại</button>
+            <button id="btn-result-menu" class="btn-3d btn-3d-slate" type="button">Về trang chủ</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MÀN HÌNH QUẢN LÝ CÂU HỎI (GIÁO VIÊN) -->
+      <section id="screen-teacher" class="overlay-screen hidden">
+        <div class="teacher-card pixar-card">
+          <div class="teacher-header">
+            <h2>Quản lý bộ câu hỏi (Giáo viên)</h2>
+            <button id="btn-teacher-close" class="btn-3d btn-3d-slate" type="button">Đóng</button>
+          </div>
+
+          <div class="teacher-toolbar">
+            <input id="teacher-search" type="search" placeholder="Tìm kiếm câu hỏi hoặc chủ đề..." />
+            <button id="btn-q-add" class="btn-3d btn-3d-green btn-sm" type="button">+ Thêm câu hỏi</button>
+            <label class="btn-3d btn-3d-blue btn-sm file-btn">
+              Nhập JSON/CSV
+              <input id="input-import-file" type="file" accept=".json,.csv" hidden />
+            </label>
+            <button id="btn-export-json" class="btn-3d btn-3d-slate btn-sm" type="button">Xuất JSON</button>
+            <button id="btn-export-csv" class="btn-3d btn-3d-slate btn-sm" type="button">Xuất CSV</button>
+            <button id="btn-restore-default" class="btn-3d btn-3d-red btn-sm" type="button">Khôi phục mặc định</button>
+          </div>
+
+          <div id="teacher-alert" class="teacher-alert hidden"></div>
+
+          <div class="teacher-body">
+            <div class="q-list-wrap" id="teacher-q-list"></div>
+
+            <form id="teacher-q-form" class="q-form hidden">
+              <h3 id="q-form-title">Thêm câu hỏi mới</h3>
+              <input type="hidden" id="q-edit-id" />
+              <label>Chủ đề / Bộ câu hỏi
+                <input id="q-input-category" type="text" placeholder="Ví dụ: Toán học, Lịch sử..." required />
+              </label>
+              <label>Nội dung câu hỏi
+                <textarea id="q-input-question" rows="2" placeholder="Nhập nội dung câu hỏi..." required></textarea>
+              </label>
+              <div class="q-opts-grid">
+                <label>Phương án A <input id="q-opt-0" type="text" required /></label>
+                <label>Phương án B <input id="q-opt-1" type="text" required /></label>
+                <label>Phương án C <input id="q-opt-2" type="text" required /></label>
+                <label>Phương án D <input id="q-opt-3" type="text" required /></label>
+              </div>
+              <label>Đáp án đúng
+                <select id="q-input-correct">
+                  <option value="0">Phương án A</option>
+                  <option value="1">Phương án B</option>
+                  <option value="2">Phương án C</option>
+                  <option value="3">Phương án D</option>
+                </select>
+              </label>
+              <label>Giải thích đáp án (không bắt buộc)
+                <input id="q-input-explanation" type="text" placeholder="Giải thích ngắn gọn..." />
+              </label>
+              <div class="q-form-actions">
+                <button type="submit" class="btn-3d btn-3d-green btn-sm">Lưu câu hỏi</button>
+                <button type="button" id="btn-q-cancel" class="btn-3d btn-3d-slate btn-sm">Hủy</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Scripts mô-đun hóa rõ ràng -->
+  <script src="./js/config.js"></script>
+  <script src="./js/audioManager.js"></script>
+  <script src="./js/assetManager.js"></script>
+  <script src="./js/skeletalEngine.js"></script>
+  <script src="./js/questionManager.js"></script>
+  <script src="./js/uiManager.js"></script>
+  <script src="./js/gameEngine.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

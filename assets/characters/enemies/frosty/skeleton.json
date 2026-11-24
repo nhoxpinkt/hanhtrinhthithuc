@@ -1,0 +1,73 @@
+{
+  "name": "Tinh Linh Băng (Frosty)",
+  "scale": 0.56,
+  "bones": [
+    {
+      "id": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 0
+    },
+    {
+      "id": "hip",
+      "parent": "root",
+      "x": 0,
+      "y": -115,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 4
+    },
+    {
+      "id": "tail",
+      "parent": "hip",
+      "x": 14,
+      "y": 48,
+      "rotation": 0,
+      "pivotX": 69.0,
+      "pivotY": 10,
+      "sprite": "tail.png",
+      "zIndex": 2,
+      "secondary": "lag"
+    },
+    {
+      "id": "arm_right",
+      "parent": "hip",
+      "x": 76,
+      "y": 8,
+      "rotation": -12,
+      "pivotX": 36.0,
+      "pivotY": 47.2,
+      "sprite": "arm_right.png",
+      "zIndex": 2,
+      "secondary": "spring"
+    },
+    {
+      "id": "body",
+      "parent": "hip",
+      "x": 0,
+      "y": -10,
+      "rotation": 0,
+      "pivotX": 83.5,
+      "pivotY": 132.0,
+      "sprite": "body.png",
+      "zIndex": 5
+    },
+    {
+      "id": "arm_left",
+      "parent": "hip",
+      "x": -76,
+      "y": 8,
+      "rotation": 12,
+      "pivotX": 70.0,
+      "pivotY": 48.0,
+      "sprite": "arm_left.png",
+      "zIndex": 8,
+      "secondary": "spring"
+    }
+  ]
+}

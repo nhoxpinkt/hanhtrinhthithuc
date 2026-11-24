@@ -1,0 +1,71 @@
+{
+  "name": "Nấm Mù Mờ (Shroomy)",
+  "scale": 0.56,
+  "bones": [
+    {
+      "id": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 0
+    },
+    {
+      "id": "hip",
+      "parent": "root",
+      "x": 0,
+      "y": -82,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 4
+    },
+    {
+      "id": "leg_left",
+      "parent": "hip",
+      "x": -26,
+      "y": 38,
+      "rotation": 0,
+      "pivotX": 44.0,
+      "pivotY": 10,
+      "sprite": "leg_left.png",
+      "zIndex": 2
+    },
+    {
+      "id": "leg_right",
+      "parent": "hip",
+      "x": 26,
+      "y": 38,
+      "rotation": 0,
+      "pivotX": 43.5,
+      "pivotY": 10,
+      "sprite": "leg_right.png",
+      "zIndex": 3
+    },
+    {
+      "id": "body",
+      "parent": "hip",
+      "x": 0,
+      "y": -6,
+      "rotation": 0,
+      "pivotX": 75.0,
+      "pivotY": 120.25,
+      "sprite": "body.png",
+      "zIndex": 5
+    },
+    {
+      "id": "cap",
+      "parent": "body",
+      "x": 0,
+      "y": -88,
+      "rotation": 0,
+      "pivotX": 120.0,
+      "pivotY": 121.36,
+      "sprite": "cap.png",
+      "zIndex": 7,
+      "secondary": "spring"
+    }
+  ]
+}

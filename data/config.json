@@ -1,0 +1,27 @@
+{
+  "gameTitle": "Hành Trình Vệ Thần Tri Thức",
+  "version": "1.1.0",
+  "canvasWidth": 1280,
+  "canvasHeight": 720,
+  "groundY": 428,
+  "defaultQuestionTimeSec": 20,
+  "defaultQuestionCount": "all",
+  "defaultQuestionSet": "all",
+  "defaultPlayerCount": 1,
+  "maxPlayers": 4,
+  "maxLives": 3,
+  "baseScore": 100,
+  "comboBonus": 25,
+  "shieldComboThreshold": 3,
+  "levels": [
+    { "level": 1, "name": "Rừng Sáng Sớm", "enemy": "shroomy", "minQuestion": 1 },
+    { "level": 2, "name": "Đồi Nắng Đỏ", "enemy": "ember", "minQuestion": 3 },
+    { "level": 3, "name": "Đền Cổ Tri Thức", "enemy": "mossy", "minQuestion": 6 },
+    { "level": 4, "name": "Đỉnh Pha Lê Băng", "enemy": "frosty", "minQuestion": 9 }
+  ],
+  "storageKeys": {
+    "questions": "vttt_questions_v1",
+    "settings": "vttt_settings_v1",
+    "highScore": "vttt_highscore_v1"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "name": "Cáo Lửa Tinh Nghịch (Ember)",
+  "scale": 0.56,
+  "bones": [
+    {
+      "id": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 0
+    },
+    {
+      "id": "hip",
+      "parent": "root",
+      "x": 0,
+      "y": -86,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 4
+    },
+    {
+      "id": "tail",
+      "parent": "hip",
+      "x": 42,
+      "y": 14,
+      "rotation": -16,
+      "pivotX": 20.8,
+      "pivotY": 178.5,
+      "sprite": "tail.png",
+      "zIndex": 1,
+      "secondary": "spring"
+    },
+    {
+      "id": "leg_left",
+      "parent": "hip",
+      "x": -22,
+      "y": 36,
+      "rotation": 0,
+      "pivotX": 30.5,
+      "pivotY": 12,
+      "sprite": "leg_left.png",
+      "zIndex": 2
+    },
+    {
+      "id": "leg_right",
+      "parent": "hip",
+      "x": 22,
+      "y": 36,
+      "rotation": 0,
+      "pivotX": 30.0,
+      "pivotY": 12,
+      "sprite": "leg_right.png",
+      "zIndex": 3
+    },
+    {
+      "id": "body",
+      "parent": "hip",
+      "x": 0,
+      "y": -4,
+      "rotation": 0,
+      "pivotX": 70.0,
+      "pivotY": 113.75,
+      "sprite": "body.png",
+      "zIndex": 5
+    },
+    {
+      "id": "head",
+      "parent": "body",
+      "x": 0,
+      "y": -78,
+      "rotation": 0,
+      "pivotX": 97.5,
+      "pivotY": 113.16,
+      "sprite": "head.png",
+      "zIndex": 6
+    },
+    {
+      "id": "ear_left",
+      "parent": "head",
+      "x": -40,
+      "y": -64,
+      "rotation": -10,
+      "pivotX": 38.5,
+      "pivotY": 93.5,
+      "sprite": "ear_left.png",
+      "zIndex": 5,
+      "secondary": "lag"
+    },
+    {
+      "id": "ear_right",
+      "parent": "head",
+      "x": 40,
+      "y": -64,
+      "rotation": 10,
+      "pivotX": 31.5,
+      "pivotY": 93.5,
+      "sprite": "ear_right.png",
+      "zIndex": 5,
+      "secondary": "lag"
+    }
+  ]
+}

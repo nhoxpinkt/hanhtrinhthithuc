@@ -1,0 +1,92 @@
+{
+  "name": "Golem Rêu Cổ (Mossy)",
+  "scale": 0.55,
+  "bones": [
+    {
+      "id": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 0
+    },
+    {
+      "id": "hip",
+      "parent": "root",
+      "x": 0,
+      "y": -108,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 4
+    },
+    {
+      "id": "leg_left",
+      "parent": "hip",
+      "x": -34,
+      "y": 48,
+      "rotation": 0,
+      "pivotX": 44.0,
+      "pivotY": 14,
+      "sprite": "leg_left.png",
+      "zIndex": 2
+    },
+    {
+      "id": "leg_right",
+      "parent": "hip",
+      "x": 34,
+      "y": 48,
+      "rotation": 0,
+      "pivotX": 47.5,
+      "pivotY": 14,
+      "sprite": "leg_right.png",
+      "zIndex": 3
+    },
+    {
+      "id": "arm_right",
+      "parent": "hip",
+      "x": 74,
+      "y": -22,
+      "rotation": -8,
+      "pivotX": 28.0,
+      "pivotY": 20,
+      "sprite": "arm_right.png",
+      "zIndex": 1
+    },
+    {
+      "id": "body",
+      "parent": "hip",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "pivotX": 105.0,
+      "pivotY": 126.0,
+      "sprite": "body.png",
+      "zIndex": 5
+    },
+    {
+      "id": "head",
+      "parent": "body",
+      "x": 0,
+      "y": -84,
+      "rotation": 0,
+      "pivotX": 74.0,
+      "pivotY": 124.0,
+      "sprite": "head.png",
+      "zIndex": 6
+    },
+    {
+      "id": "arm_left",
+      "parent": "hip",
+      "x": -74,
+      "y": -22,
+      "rotation": 8,
+      "pivotX": 40.199999999999996,
+      "pivotY": 20,
+      "sprite": "arm_left.png",
+      "zIndex": 8
+    }
+  ]
+}

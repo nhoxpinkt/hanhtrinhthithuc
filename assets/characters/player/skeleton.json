@@ -1,0 +1,128 @@
+{
+  "name": "Bé Mầm (Pip)",
+  "scale": 0.52,
+  "bones": [
+    {
+      "id": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 0
+    },
+    {
+      "id": "hip",
+      "parent": "root",
+      "x": 0,
+      "y": -98,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "zIndex": 5
+    },
+    {
+      "id": "leg_back",
+      "parent": "hip",
+      "x": 18,
+      "y": 24,
+      "rotation": 0,
+      "pivotX": 35.28,
+      "pivotY": 16,
+      "sprite": "leg_back.png",
+      "zIndex": 2
+    },
+    {
+      "id": "leg_front",
+      "parent": "hip",
+      "x": -12,
+      "y": 24,
+      "rotation": 0,
+      "pivotX": 35.28,
+      "pivotY": 16,
+      "sprite": "leg_front.png",
+      "zIndex": 4
+    },
+    {
+      "id": "backpack",
+      "parent": "hip",
+      "x": -52,
+      "y": -28,
+      "rotation": -4,
+      "pivotX": 75.0,
+      "pivotY": 59.6,
+      "sprite": "backpack.png",
+      "zIndex": 1,
+      "secondary": "lag"
+    },
+    {
+      "id": "torso",
+      "parent": "hip",
+      "x": 0,
+      "y": -6,
+      "rotation": 0,
+      "pivotX": 80.5,
+      "pivotY": 133.2,
+      "sprite": "body.png",
+      "zIndex": 5
+    },
+    {
+      "id": "arm_back",
+      "parent": "torso",
+      "x": 36,
+      "y": -64,
+      "rotation": -18,
+      "pivotX": 33.25,
+      "pivotY": 18,
+      "sprite": "arm_back.png",
+      "zIndex": 3
+    },
+    {
+      "id": "wand",
+      "parent": "arm_back",
+      "x": 28,
+      "y": 54,
+      "rotation": 16,
+      "pivotX": 29.75,
+      "pivotY": 148.75,
+      "sprite": "wand.png",
+      "zIndex": 3,
+      "secondary": "spring"
+    },
+    {
+      "id": "head",
+      "parent": "torso",
+      "x": 4,
+      "y": -102,
+      "rotation": 0,
+      "pivotX": 100.8,
+      "pivotY": 170.0,
+      "sprite": "head.png",
+      "zIndex": 7
+    },
+    {
+      "id": "leaf_hat",
+      "parent": "head",
+      "x": -4,
+      "y": -118,
+      "rotation": -5,
+      "pivotX": 105.0,
+      "pivotY": 105.11999999999999,
+      "sprite": "leaf_hat.png",
+      "zIndex": 9,
+      "secondary": "spring"
+    },
+    {
+      "id": "arm_front",
+      "parent": "torso",
+      "x": -34,
+      "y": -62,
+      "rotation": 10,
+      "pivotX": 33.25,
+      "pivotY": 18,
+      "sprite": "arm_front.png",
+      "zIndex": 10
+    }
+  ]
+}
