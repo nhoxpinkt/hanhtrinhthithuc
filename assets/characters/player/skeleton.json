@@ -1,0 +1,18 @@
+{
+  "name": "Bé Mầm (Pip)",
+  "scale": 0.58,
+  "bones": [
+    { "id": "root", "parent": null, "x": 0, "y": 0, "rotation": 0, "scaleX": 1, "scaleY": 1, "zIndex": 0 },
+    { "id": "hip", "parent": "root", "x": 0, "y": -95, "rotation": 0, "scaleX": 1, "scaleY": 1, "zIndex": 5 },
+    { "id": "leg_back", "parent": "hip", "x": 16, "y": 24, "rotation": 0, "pivotX": 30, "pivotY": 12, "sprite": "leg_back.png", "zIndex": 2 },
+    { "id": "leg_front", "parent": "hip", "x": -14, "y": 24, "rotation": 0, "pivotX": 30, "pivotY": 12, "sprite": "leg_front.png", "zIndex": 4 },
+    { "id": "torso", "parent": "hip", "x": 0, "y": -10, "rotation": 0, "pivotX": 80, "pivotY": 110, "sprite": "body.png", "zIndex": 5 },
+    { "id": "backpack", "parent": "torso", "x": -48, "y": -32, "rotation": -4, "pivotX": 45, "pivotY": 35, "sprite": "backpack.png", "zIndex": 1, "secondary": "lag" },
+    { "id": "arm_back", "parent": "torso", "x": 34, "y": -52, "rotation": -10, "pivotX": 30, "pivotY": 18, "sprite": "arm_back.png", "zIndex": 3 },
+    { "id": "wand", "parent": "arm_back", "x": 8, "y": 54, "rotation": 18, "pivotX": 40, "pivotY": 148, "sprite": "wand.png", "zIndex": 3, "secondary": "spring" },
+    { "id": "head", "parent": "torso", "x": 2, "y": -96, "rotation": 0, "pivotX": 100, "pivotY": 150, "sprite": "head.png", "zIndex": 7 },
+    { "id": "eyes", "parent": "head", "x": 8, "y": -44, "rotation": 0, "pivotX": 70, "pivotY": 35, "sprite": "eyes_open.png", "blinkSprite": "eyes_blink.png", "hurtSprite": "eyes_hurt.png", "zIndex": 8 },
+    { "id": "leaf_hat", "parent": "head", "x": -4, "y": -108, "rotation": -3, "pivotX": 110, "pivotY": 85, "sprite": "leaf_hat.png", "zIndex": 9, "secondary": "spring" },
+    { "id": "arm_front", "parent": "torso", "x": -34, "y": -50, "rotation": 8, "pivotX": 30, "pivotY": 18, "sprite": "arm_front.png", "zIndex": 10 }
+  ]
+}

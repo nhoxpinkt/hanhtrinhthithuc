@@ -1,0 +1,15 @@
+{
+  "name": "Nấm Mù Mờ (Shroomy)",
+  "scale": 0.62,
+  "bones": [
+    { "id": "root", "parent": null, "x": 0, "y": 0, "rotation": 0, "scaleX": 1, "scaleY": 1, "zIndex": 0 },
+    { "id": "hip", "parent": "root", "x": 0, "y": -78, "rotation": 0, "scaleX": 1, "scaleY": 1, "zIndex": 4 },
+    { "id": "leg_left", "parent": "hip", "x": -22, "y": 32, "rotation": 0, "pivotX": 28, "pivotY": 12, "sprite": "leg_left.png", "zIndex": 2 },
+    { "id": "leg_right", "parent": "hip", "x": 22, "y": 32, "rotation": 0, "pivotX": 28, "pivotY": 12, "sprite": "leg_right.png", "zIndex": 3 },
+    { "id": "body", "parent": "hip", "x": 0, "y": -8, "rotation": 0, "pivotX": 75, "pivotY": 85, "sprite": "body.png", "zIndex": 5 },
+    { "id": "eyes", "parent": "body", "x": -6, "y": -20, "rotation": 0, "pivotX": 60, "pivotY": 30, "sprite": "eyes_open.png", "hurtSprite": "eyes_hurt.png", "zIndex": 6 },
+    { "id": "cap", "parent": "body", "x": 0, "y": -64, "rotation": 0, "pivotX": 110, "pivotY": 95, "sprite": "cap.png", "zIndex": 7, "secondary": "spring" },
+    { "id": "tendril_left", "parent": "cap", "x": -78, "y": -16, "rotation": 18, "pivotX": 25, "pivotY": 10, "sprite": "tendril_left.png", "zIndex": 4, "secondary": "lag" },
+    { "id": "tendril_right", "parent": "cap", "x": 78, "y": -16, "rotation": -18, "pivotX": 25, "pivotY": 10, "sprite": "tendril_right.png", "zIndex": 4, "secondary": "lag" }
+  ]
+}

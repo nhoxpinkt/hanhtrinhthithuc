@@ -1,0 +1,15 @@
+{
+  "name": "Golem Rêu Cổ (Mossy)",
+  "scale": 0.64,
+  "bones": [
+    { "id": "root", "parent": null, "x": 0, "y": 0, "rotation": 0, "scaleX": 1, "scaleY": 1, "zIndex": 0 },
+    { "id": "hip", "parent": "root", "x": 0, "y": -105, "rotation": 0, "scaleX": 1, "scaleY": 1, "zIndex": 4 },
+    { "id": "leg_left", "parent": "hip", "x": -34, "y": 48, "rotation": 0, "pivotX": 37, "pivotY": 14, "sprite": "leg_left.png", "zIndex": 2 },
+    { "id": "leg_right", "parent": "hip", "x": 34, "y": 48, "rotation": 0, "pivotX": 37, "pivotY": 14, "sprite": "leg_right.png", "zIndex": 3 },
+    { "id": "arm_right", "parent": "hip", "x": 66, "y": -20, "rotation": -10, "pivotX": 40, "pivotY": 20, "sprite": "arm_right.png", "zIndex": 1 },
+    { "id": "body", "parent": "hip", "x": 0, "y": 0, "rotation": 0, "pivotX": 100, "pivotY": 110, "sprite": "body.png", "zIndex": 5 },
+    { "id": "head", "parent": "body", "x": -2, "y": -82, "rotation": 0, "pivotX": 70, "pivotY": 75, "sprite": "head.png", "zIndex": 6 },
+    { "id": "eyes", "parent": "head", "x": -8, "y": -20, "rotation": 0, "pivotX": 55, "pivotY": 25, "sprite": "eyes_open.png", "hurtSprite": "eyes_hurt.png", "zIndex": 7 },
+    { "id": "arm_left", "parent": "hip", "x": -66, "y": -18, "rotation": 10, "pivotX": 40, "pivotY": 20, "sprite": "arm_left.png", "zIndex": 8 }
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "q01",
+    "category": "Khoa học tự nhiên",
+    "question": "Quá trình cây xanh sử dụng ánh sáng mặt trời để tổng hợp chất hữu cơ từ nước và khí cacbonic gọi là gì?",
+    "options": ["Hô hấp", "Quang hợp", "Thoát hơi nước", "Nảy mầm"],
+    "correctIndex": 1,
+    "explanation": "Quang hợp giúp cây xanh tạo ra chất hữu cơ và giải phóng khí oxy."
+  },
+  {
+    "id": "q02",
+    "category": "Toán học",
+    "question": "Một hình chữ nhật có chiều dài 12 cm và chiều rộng 5 cm. Chu vi của hình chữ nhật đó là bao nhiêu?",
+    "options": ["17 cm", "34 cm", "60 cm", "24 cm"],
+    "correctIndex": 1,
+    "explanation": "Chu vi hình chữ nhật = (12 + 5) × 2 = 34 cm."
+  },
+  {
+    "id": "q03",
+    "category": "Địa lý",
+    "question": "Đỉnh núi nào được mệnh danh là 'Nóc nhà Đông Dương' và là đỉnh núi cao nhất Việt Nam?",
+    "options": ["Núi Bà Đen", "Núi Bạch Mã", "Đỉnh Fansipan", "Đỉnh Ngọc Linh"],
+    "correctIndex": 2,
+    "explanation": "Đỉnh Fansipan thuộc dãy Hoàng Liên Sơn cao 3.147,3 m."
+  },
+  {
+    "id": "q04",
+    "category": "Lịch sử",
+    "question": "Ai là người lãnh đạo cuộc khởi nghĩa đánh thắng quân Nam Hán trên sông Bạch Đằng năm 938?",
+    "options": ["Ngô Quyền", "Lý Thường Kiệt", "Trần Hưng Đạo", "Lê Lợi"],
+    "correctIndex": 0,
+    "explanation": "Chiến thắng Bạch Đằng năm 938 của Ngô Quyền mở ra kỷ nguyên độc lập lâu dài."
+  },
+  {
+    "id": "q05",
+    "category": "Khoa học tự nhiên",
+    "question": "Ở điều kiện áp suất tiêu chuẩn, nước tinh khiết sôi ở nhiệt độ bao nhiêu độ C?",
+    "options": ["50°C", "80°C", "100°C", "120°C"],
+    "correctIndex": 2,
+    "explanation": "Nước tinh khiết sôi ở 100°C và đông đặc ở 0°C dưới áp suất 1 atm."
+  },
+  {
+    "id": "q06",
+    "category": "Toán học",
+    "question": "Tổng số đo ba góc trong của một tam giác phẳng luôn bằng bao nhiêu độ?",
+    "options": ["90°", "180°", "270°", "360°"],
+    "correctIndex": 1,
+    "explanation": "Trong hình học phẳng Euclid, tổng ba góc trong một tam giác luôn là 180°."
+  },
+  {
+    "id": "q07",
+    "category": "Tin học",
+    "question": "Trong máy tính, 1 Kilobyte (KB) theo hệ nhị phân bằng bao nhiêu Byte?",
+    "options": ["100 Byte", "512 Byte", "1000 Byte", "1024 Byte"],
+    "correctIndex": 3,
+    "explanation": "1 KB = 2^10 Byte = 1024 Byte."
+  },
+  {
+    "id": "q08",
+    "category": "Ngữ văn",
+    "question": "Tác phẩm 'Dế Mèn phiêu lưu ký' nổi tiếng dành cho thiếu nhi là của nhà văn nào?",
+    "options": ["Tô Hoài", "Nam Cao", "Nguyễn Nhật Ánh", "Vũ Trọng Phụng"],
+    "correctIndex": 0,
+    "explanation": "Nhà văn Tô Hoài sáng tác 'Dế Mèn phiêu lưu ký' năm 1941."
+  },
+  {
+    "id": "q09",
+    "category": "Khoa học tự nhiên",
+    "question": "Hành tinh nào nằm gần Mặt Trời nhất trong Hệ Mặt Trời?",
+    "options": ["Sao Kim", "Sao Thủy", "Trái Đất", "Sao Hỏa"],
+    "correctIndex": 1,
+    "explanation": "Sao Thủy (Mercury) là hành tinh ở vị trí gần Mặt Trời nhất."
+  },
+  {
+    "id": "q10",
+    "category": "Địa lý",
+    "question": "Con sông nào dài nhất chảy qua lãnh thổ khu vực Đồng bằng sông Cửu Long của Việt Nam?",
+    "options": ["Sông Hồng", "Sông Đà", "Sông Mê Kông", "Sông Đồng Nai"],
+    "correctIndex": 2,
+    "explanation": "Sông Mê Kông chảy vào Việt Nam chia thành sông Tiền và sông Hậu (Cửu Long)."
+  },
+  {
+    "id": "q11",
+    "category": "Toán học",
+    "question": "Giá trị của biểu thức 25 + 15 × 2 bằng bao nhiêu?",
+    "options": ["80", "55", "65", "70"],
+    "correctIndex": 1,
+    "explanation": "Thực hiện phép nhân trước: 15 × 2 = 30, sau đó 25 + 30 = 55."
+  },
+  {
+    "id": "q12",
+    "category": "Khoa học tự nhiên",
+    "question": "Khí nào chiếm tỷ lệ phần trăm thể tích lớn nhất trong không khí?",
+    "options": ["Oxy", "Cacbonic", "Nitơ", "Hơi nước"],
+    "correctIndex": 2,
+    "explanation": "Không khí chứa khoảng 78% khí Nitơ, 21% khí Oxy và 1% các khí khác."
+  },
+  {
+    "id": "q13",
+    "category": "Lịch sử",
+    "question": "Vị vua nào đã ban hành 'Chiếu dời đô' chuyển kinh đô từ Hoa Lư ra thành Đại La (Thăng Long) năm 1010?",
+    "options": ["Đinh Tiên Hoàng", "Lý Thái Tổ", "Trần Thái Tông", "Lê Thánh Tông"],
+    "correctIndex": 1,
+    "explanation": "Năm 1010, vua Lý Thái Tổ (Lý Công Uẩn) dời đô về Thăng Long."
+  },
+  {
+    "id": "q14",
+    "category": "Tin học",
+    "question": "Tổ hợp phím tắt nào thường dùng để sao chép (Copy) dữ liệu trên hệ điều hành Windows?",
+    "options": ["Ctrl + V", "Ctrl + X", "Ctrl + C", "Ctrl + Z"],
+    "correctIndex": 2,
+    "explanation": "Ctrl + C dùng để sao chép, Ctrl + V để dán, Ctrl + X để cắt."
+  },
+  {
+    "id": "q15",
+    "category": "Ngữ văn",
+    "question": "Trong câu 'Mùa xuân, cây cối đâm chồi nảy lộc.', bộ phận nào là chủ ngữ?",
+    "options": ["Mùa xuân", "Cây cối", "Đâm chồi nảy lộc", "Cây cối đâm chồi"],
+    "correctIndex": 1,
+    "explanation": "'Mùa xuân' là trạng ngữ chỉ thời gian; 'cây cối' là chủ ngữ."
+  },
+  {
+    "id": "q16",
+    "category": "Toán học",
+    "question": "Số nguyên tố chẵn duy nhất trong tập hợp số tự nhiên là số nào?",
+    "options": ["0", "2", "4", "6"],
+    "correctIndex": 1,
+    "explanation": "Số 2 chỉ có hai ước là 1 và chính nó nên là số nguyên tố chẵn duy nhất."
+  },
+  {
+    "id": "q17",
+    "category": "Khoa học tự nhiên",
+    "question": "Cơ quan nào trong cơ thể người có nhiệm vụ bơm máu đi nuôi khắp cơ thể?",
+    "options": ["Phổi", "Gan", "Tim", "Thận"],
+    "correctIndex": 2,
+    "explanation": "Tim co bóp nhịp nhàng giúp lưu thông máu qua hệ tuần hoàn."
+  },
+  {
+    "id": "q18",
+    "category": "Địa lý",
+    "question": "Đại dương nào có diện tích lớn nhất trên Trái Đất?",
+    "options": ["Đại Tây Dương", "Ấn Độ Dương", "Bắc Băng Dương", "Thái Bình Dương"],
+    "correctIndex": 3,
+    "explanation": "Thái Bình Dương chiếm khoảng 1/3 diện tích bề mặt Trái Đất."
+  },
+  {
+    "id": "q19",
+    "category": "Lịch sử",
+    "question": "Chiến thắng Điện Biên Phủ 'lừng lẫy năm châu, chấn động địa cầu' diễn ra vào năm nào?",
+    "options": ["1945", "1954", "1968", "1975"],
+    "correctIndex": 1,
+    "explanation": "Chiến dịch Điện Biên Phủ toàn thắng vào ngày 7/5/1954."
+  },
+  {
+    "id": "q20",
+    "category": "Toán học",
+    "question": "Một giờ có 60 phút. Vậy 1/4 giờ bằng bao nhiêu phút?",
+    "options": ["10 phút", "15 phút", "20 phút", "25 phút"],
+    "correctIndex": 1,
+    "explanation": "60 : 4 = 15 phút."
+  },
+  {
+    "id": "q21",
+    "category": "Tin học",
+    "question": "Thiết bị nào sau đây là thiết bị xuất (Output device) của máy tính?",
+    "options": ["Bàn phím", "Chuột máy tính", "Màn hình", "Micro"],
+    "correctIndex": 2,
+    "explanation": "Màn hình hiển thị thông tin ra cho người dùng nên là thiết bị xuất."
+  },
+  {
+    "id": "q22",
+    "category": "Khoa học tự nhiên",
+    "question": "Loài vật nào sau đây thuộc lớp Thú (Động vật có vú) nhưng lại biết bay?",
+    "options": ["Chim bồ câu", "Con dơi", "Chuồn chuồn", "Chim cánh cụt"],
+    "correctIndex": 1,
+    "explanation": "Dơi là loài thú duy nhất có khả năng bay thực sự."
+  },
+  {
+    "id": "q23",
+    "category": "Ngữ văn",
+    "question": "Biện pháp tu từ nào gán cho sự vật, cây cối những hành động, suy nghĩ như con người?",
+    "options": ["So sánh", "Nhân hóa", "Điệp ngữ", "Nói quá"],
+    "correctIndex": 1,
+    "explanation": "Nhân hóa là cách gọi hoặc tả con vật, cây cối, đồ vật bằng từ ngữ dùng cho người."
+  },
+  {
+    "id": "q24",
+    "category": "Địa lý",
+    "question": "Vịnh Hạ Long — Di sản thiên nhiên thế giới — thuộc tỉnh nào của Việt Nam?",
+    "options": ["Hải Phòng", "Quảng Ninh", "Thanh Hóa", "Khánh Hòa"],
+    "correctIndex": 1,
+    "explanation": "Vịnh Hạ Long nằm ở tỉnh Quảng Ninh, vùng Đông Bắc Việt Nam."
+  },
+  {
+    "id": "q25",
+    "category": "Toán học",
+    "question": "Diện tích của một hình vuông có cạnh dài 9 cm là bao nhiêu?",
+    "options": ["18 cm²", "36 cm²", "81 cm²", "27 cm²"],
+    "correctIndex": 2,
+    "explanation": "Diện tích hình vuông = cạnh × cạnh = 9 × 9 = 81 cm²."
+  },
+  {
+    "id": "q26",
+    "category": "Kỹ năng sống",
+    "question": "Khi tham gia giao thông bằng xe đạp điện hoặc xe máy, hành động nào là đúng quy định an toàn?",
+    "options": ["Đi hàng ba nói chuyện", "Đội mũ bảo hiểm cài quai đúng cách", "Vượt đèn vàng thật nhanh", "Buông cả hai tay"],
+    "correctIndex": 1,
+    "explanation": "Đội mũ bảo hiểm đạt chuẩn và cài quai đúng cách giúp bảo vệ vùng đầu."
+  },
+  {
+    "id": "q27",
+    "category": "Khoa học tự nhiên",
+    "question": "Âm thanh KHÔNG thể truyền qua môi trường nào sau đây?",
+    "options": ["Chất rắn", "Chất lỏng", "Chất khí", "Chân không"],
+    "correctIndex": 3,
+    "explanation": "Sóng âm cần môi trường vật chất để truyền đi nên không truyền được trong chân không."
+  },
+  {
+    "id": "q28",
+    "category": "Tin học",
+    "question": "Trong soạn thảo văn bản, phím nào dùng để xuống dòng và bắt đầu đoạn mới?",
+    "options": ["Spacebar", "Backspace", "Enter", "Shift"],
+    "correctIndex": 2,
+    "explanation": "Phím Enter dùng để xác nhận lệnh hoặc xuống dòng tạo đoạn mới."
+  },
+  {
+    "id": "q29",
+    "category": "Lịch sử",
+    "question": "Quốc kỳ nước Cộng hòa Xã hội Chủ nghĩa Việt Nam có nền màu gì và ngôi sao màu gì?",
+    "options": ["Nền xanh, sao trắng", "Nền đỏ, sao vàng năm cánh", "Nền vàng, sao đỏ", "Nền đỏ, sao trắng"],
+    "correctIndex": 1,
+    "explanation": "Quốc kỳ Việt Nam là lá cờ đỏ sao vàng năm cánh."
+  },
+  {
+    "id": "q30",
+    "category": "Địa lý",
+    "question": "Châu lục nào có khí hậu lạnh giá nhất, hầu như quanh năm bị băng tuyết bao phủ?",
+    "options": ["Châu Âu", "Châu Úc", "Châu Nam Cực", "Châu Phi"],
+    "correctIndex": 2,
+    "explanation": "Châu Nam Cực là châu lục lạnh nhất trên Trái Đất."
+  }
+]
