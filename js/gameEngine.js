@@ -206,7 +206,7 @@ window.VTTT.GameEngine = class GameEngine {
 
     this.collectibles.push({
       x: 900,
-      y: this.config.groundY - 190,
+      y: this.config.groundY - 155,
       collected: false,
       bobPhase: 0
     });
@@ -218,7 +218,7 @@ window.VTTT.GameEngine = class GameEngine {
     if (this.state !== window.VTTT.STATES.PLAYING) return;
     if (!this.isGrounded) return;
     this.isGrounded = false;
-    this.playerVy = -680;
+    this.playerVy = -620;
     this.playerRig.setAnimation("jump", true);
     this.audio.playSfx("jump");
     this.particles.burst(this.playerX, this.config.groundY, "#bbf7d0", 8);
@@ -476,19 +476,21 @@ window.VTTT.GameEngine = class GameEngine {
     const H = this.config.canvasHeight;
     ctx.clearRect(0, 0, W, H);
 
-    const sky = this.assets.images["./assets/images/bg_sky.png"];
-    if (sky) ctx.drawImage(sky, 0, 0, W, H);
-    this.drawParallaxLayer(this.assets.images["./assets/images/bg_mountains.png"], 0.15);
-    this.drawParallaxLayer(this.assets.images["./assets/images/bg_trees_far.png"], 0.35);
-    this.drawParallaxLayer(this.assets.images["./assets/images/bg_trees_near.png"], 0.65);
-
-    const ground = this.assets.images["./assets/images/ground_tile.png"];
-    if (ground) {
-      const gw = ground.width;
-      const gShift = this.bgScroll % gw;
-      for (let x = -gShift; x < W; x += gw) {
-        ctx.drawImage(ground, x, this.config.groundY - 12);
-      }
+    const bg3d = this.assets.images["./assets/images/bg_forest_3d.png"];
+    if (bg3d) {
+      const period = W * 2;
+      const shift = (this.bgScroll * 0.45) % period;
+      // Vẽ cuộn liền mạch bằng ghép đối xứng
+      ctx.drawImage(bg3d, -shift, 0, W, H);
+      ctx.save();
+      ctx.translate(W * 2 - shift, 0);
+      ctx.scale(-1, 1);
+      ctx.drawImage(bg3d, 0, 0, W, H);
+      ctx.restore();
+      ctx.drawImage(bg3d, W * 2 - shift, 0, W, H);
+    } else {
+      const sky = this.assets.images["./assets/images/bg_sky.png"];
+      if (sky) ctx.drawImage(sky, 0, 0, W, H);
     }
 
     const starImg = this.assets.images["./assets/images/star_knowledge.png"];

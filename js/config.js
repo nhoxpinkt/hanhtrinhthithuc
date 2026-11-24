@@ -16,7 +16,7 @@ window.VTTT.DEFAULT_CONFIG = {
   gameTitle: "Hành Trình Vệ Thần Tri Thức",
   canvasWidth: 1280,
   canvasHeight: 720,
-  groundY: 575,
+  groundY: 428,
   defaultQuestionTimeSec: 20,
   defaultQuestionCount: "all",
   defaultQuestionSet: "all",

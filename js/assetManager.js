@@ -65,6 +65,8 @@ window.VTTT.AssetManager = class AssetManager {
 
   async loadAll() {
     const envImages = [
+      "./assets/images/bg_forest_3d.png",
+      "./assets/images/trophy_cup.png",
       "./assets/images/bg_sky.png",
       "./assets/images/bg_mountains.png",
       "./assets/images/bg_trees_far.png",
